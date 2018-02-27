@@ -46,12 +46,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-// Find the View that shows the numbers category
+// Find the View that shows the family category
         TextView family = (TextView) findViewById(R.id.family);
 
 // Set a click listener on that View
         family.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
+            // The code in this method will be executed when the family View is clicked on.
             @Override
             public void onClick(View view) {
                 Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
@@ -60,12 +60,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-// Find the View that shows the numbers category
+// Find the View that shows the colors category
         TextView colors = (TextView) findViewById(R.id.colors);
 
 // Set a click listener on that View
         colors.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
+            // The code in this method will be executed when the colors View is clicked on.
             @Override
             public void onClick(View view) {
                 Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
@@ -74,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-// Find the View that shows the numbers category
+// Find the View that shows the phrases category
         TextView phrases = (TextView) findViewById(R.id.phrases);
 
 // Set a click listener on that View
         phrases.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
+            // The code in this method will be executed when the phrases View is clicked on.
             @Override
             public void onClick(View view) {
                 Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
