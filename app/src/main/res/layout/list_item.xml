@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="@dimen/words_padding"
     >
 
     <TextView
+        android:id="@+id/miwok_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/words_padding"
-        android:paddingStart="@dimen/words_padding"
-        android:text="lutti"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        tools:text="lutti"/>
 
     <TextView
+        android:id="@+id/default_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/words_padding"
-        android:paddingStart="@dimen/words_padding"
-        android:text="one"/>
-
+        tools:text="one"/>
 
 </LinearLayout>
