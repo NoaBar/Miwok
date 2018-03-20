@@ -23,7 +23,11 @@ public class Word {
 
         /**Image resource id
         */
-        private int mImageResourceId;
+        private int mImageResourceId = NO_IMAGE_Provided;
+
+        // למה מינוס 1?????????????????????
+
+        private static final int NO_IMAGE_Provided = -1;
 
     /**
          * Constructor 1
@@ -71,6 +75,12 @@ public class Word {
      */
         public int getImageResourceId(){
             return mImageResourceId;}
+/** returns if there is an image to the word or not
+ * @return
+ * **/
+            public boolean hasImage(){
+                return mImageResourceId != NO_IMAGE_Provided;
+            }
 
     }
 
