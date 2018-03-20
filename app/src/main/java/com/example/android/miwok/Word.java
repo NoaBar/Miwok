@@ -26,7 +26,7 @@ public class Word {
         private int mImageResourceId;
 
     /**
-         * Constructor!
+         * Constructor 1
          * Create a new Word object.
          * @param defaultTranslation is the word in a language that the user is already familiar with
          *                           (such as English)
@@ -37,7 +37,8 @@ public class Word {
             mMiwokTranslation = miwokTranslation;
         }
         /**
-         * Second Constructor
+         * Constructor 2
+         * Create a new Word object.
             2 strings and int! (for the image in every word).
          * @param defaultTranslation is the word in a language that the user is already familiar with
          *                           (such as English)
