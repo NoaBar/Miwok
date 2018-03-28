@@ -2,8 +2,10 @@ package com.example.android.miwok;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +20,8 @@ import java.util.ArrayList;
  */
 public class WordAdapter extends ArrayAdapter<Word> {
 
-
-    /**resource ID for the background color of this list of words
-     *
+    /**
+     * resource ID for the background color of this list of words
      */
     private int mColorResourceId;
 
@@ -30,7 +31,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
      * to populate into the lists.
      *
      * @param activity The current context. Used to inflate the layout file.
-     * @param words   A List of Word objects to display in a list
+     * @param words    A List of Word objects to display in a list
      */
 
     public WordAdapter(Activity activity, ArrayList<Word> words, int colorResourceId) {
@@ -62,7 +63,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         // Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
+        final Word currentWord = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
@@ -77,26 +78,35 @@ public class WordAdapter extends ArrayAdapter<Word> {
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
-        if(currentWord.hasImage()) {
-         // If an image is available, display the provided image based on the resource ID
+        if (currentWord.hasImage()) {
+            // If an image is available, display the provided image based on the resource ID
             imageView.setImageResource(currentWord.getImageResourceId());
-          // Make sure the view is visible
+            // Make sure the view is visible
             imageView.setVisibility(View.VISIBLE);
 
-        }else{
+        } else {
             // Otherwise hide the ImageView (set visibility to GONE)
             imageView.setVisibility(View.GONE);
 
         }
 
         // Set the theme color for the list item
-            View textContainer = listItemView.findViewById(R.id.text_container);
+        View textContainer = listItemView.findViewById(R.id.text_container);
         // Find the color that the resource ID maps to
-            int color = ContextCompat.getColor(getContext(), mColorResourceId);
+        int color = ContextCompat.getColor(getContext(), mColorResourceId);
         // Set the background color of the text container View
-            textContainer.setBackgroundColor(color);
+        textContainer.setBackgroundColor(color);
 
-
+/**
+     // try to put sound through the adapter. didn't work.!!!!!!!!!!!!!!!!! לשאול את טל
+        textContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer sound = MediaPlayer.create(getContext(), currentWord.getSound());
+                sound.start();
+            }
+        });
+*/
         return listItemView;
     }
 }

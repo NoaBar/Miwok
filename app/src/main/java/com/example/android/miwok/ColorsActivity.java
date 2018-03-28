@@ -14,15 +14,15 @@ public class ColorsActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         //Create an array of words
-        ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("Red", "weṭeṭṭi", R.drawable.color_red));
-        words.add(new Word("Green", "chokokki", R.drawable.color_green));
-        words.add(new Word("Brown", "ṭakaakki", R.drawable.color_brown));
-        words.add(new Word("Gray", "ṭopoppi", R.drawable.color_gray));
-        words.add(new Word("Black", "kululli", R.drawable.color_black));
-        words.add(new Word("White", "kelelli", R.drawable.color_white));
-        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow));
-        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
+        final ArrayList<Word> words = new ArrayList<Word>();
+        words.add(new Word("Red", "weṭeṭṭi", R.drawable.color_red, R.raw.color_red));
+        words.add(new Word("Green", "chokokki", R.drawable.color_green, R.raw.color_green));
+        words.add(new Word("Brown", "ṭakaakki", R.drawable.color_brown, R.raw.color_brown));
+        words.add(new Word("Gray", "ṭopoppi", R.drawable.color_gray, R.raw.color_gray));
+        words.add(new Word("Black", "kululli", R.drawable.color_black, R.raw.color_black));
+        words.add(new Word("White", "kelelli", R.drawable.color_white, R.raw.color_white));
+        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
+        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
