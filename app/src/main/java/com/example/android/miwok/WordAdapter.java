@@ -98,7 +98,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         textContainer.setBackgroundColor(color);
 
 /**
-     // try to put sound through the adapter. didn't work.!!!!!!!!!!!!!!!!! לשאול את טל
+     // try to put sound through the adapter. didn't work.!!!!!!!!!!!!!!!!! לשאול
         textContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

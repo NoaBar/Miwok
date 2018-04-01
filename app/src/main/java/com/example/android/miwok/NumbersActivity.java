@@ -57,6 +57,7 @@ public class NumbersActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
                 // Get the {@link Word} object at the given position the user clicked on
                 Word word = words.get(position);
 
