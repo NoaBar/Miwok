@@ -70,14 +70,14 @@ public class NumbersActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
+                // Get the {@link Word} object at the given position the user clicked on
+                Word word = words.get(position);
+
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
                 releaseMediaPlayer();
 
-                // Get the {@link Word} object at the given position the user clicked on
-                Word word = words.get(position);
-
-                // Create and setup the {@link MediaPlayer} for the audio resource associated
+                                // Create and setup the {@link MediaPlayer} for the audio resource associated
                 // with the current word
                 mMediaPlayer = MediaPlayer.create(NumbersActivity.this, word.getSound());
 
