@@ -23,7 +23,7 @@ public class ColorsActivity extends AppCompatActivity {
     /**
      * Handles audio focus when playing a sound file
      */
-    private AudioManager mAudioManager; 
+    private AudioManager mAudioManager;
 
     /**
      * This listener gets triggered whenever the audio focus changes
