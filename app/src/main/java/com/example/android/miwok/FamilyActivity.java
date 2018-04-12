@@ -126,7 +126,6 @@ public class FamilyActivity extends AppCompatActivity {
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                     //We have audio focus now.
 
-
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
                     // with the current word
                     mMediaPlayer = MediaPlayer.create(FamilyActivity.this, word.getSound());
