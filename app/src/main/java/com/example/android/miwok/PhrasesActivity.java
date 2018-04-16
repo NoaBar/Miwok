@@ -106,8 +106,7 @@ public class PhrasesActivity extends AppCompatActivity {
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(adapter);
 
-        // Set a click listener to play the audio when the list item is clicked on
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        AdapterView.OnItemClickListener listener =  new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
@@ -130,18 +129,21 @@ public class PhrasesActivity extends AppCompatActivity {
 
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
-                // with the current word
-                mMediaPlayer = MediaPlayer.create(PhrasesActivity.this, word.getSound());
+                    // with the current word
+                    mMediaPlayer = MediaPlayer.create(PhrasesActivity.this, word.getSound());
 
-                // Start the audio file
-                mMediaPlayer.start();
+                    // Start the audio file
+                    mMediaPlayer.start();
 
-                // Setup a listener on the media player, so that we can stop and release the
-                // media player once the sound has finished playing.
-                mMediaPlayer.setOnCompletionListener(mCompletionListener);
+                    // Setup a listener on the media player, so that we can stop and release the
+                    // media player once the sound has finished playing.
+                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
+                }
             }
-            }
-        });
+        };
+
+        // Set a click listener to play the audio when the list item is clicked on
+        listView.setOnItemClickListener(listener);
     }
 
     /**
