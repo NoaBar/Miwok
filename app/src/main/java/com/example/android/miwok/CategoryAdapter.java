@@ -37,9 +37,9 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return new NumbersFragment();
         } else if (position == 1){
-            return new ColorsFragment();
-        } else if (position == 2){
             return new FamilyFragment();
+        } else if (position == 2){
+            return new ColorsFragment();
         } else {
             return new PhrasesFragment();
         }
